@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://music.elevated.ovh/bandcamp">
+        <meta property="og:title" content="ELEVATED | Bandcamp">
+        <meta property="og:description" content="Bandcamp Redirect">
+        <meta property="og:image" content="https://www.elevated.ovh/logo/poster.png">
+        <meta name="darkreader-lock">
+        <script>
+            function redirect() {
+                window.open("https://musically-elevated.bandcamp.com", "_self")
+            }
+        </script>
+        <style>
+            @font-face {
+                font-family: "OpenSans";
+                src: url("../fonts/OpenSans-VariableFont_wdthwght.ttf");
+            }
+
+            body {
+                background-color: #111111;
+            }
+
+            span {
+                display: flex;
+                color: #CFCFCF;
+                height: 97vh;
+                justify-content: center;
+                align-items: center;
+                font-size: xx-large;
+                font-family: "OpenSans";
+            }
+        </style>
+    </head>
+    <body onload="redirect()">
+        <span>Redirecting...</span>
+    </body>
+</html>
