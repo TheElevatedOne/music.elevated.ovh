@@ -85,3 +85,70 @@ div.titlebar {
         cursor: pointer;
     }
 }
+
+div.release {
+    display: grid;
+    grid-template-rows: min-content;
+    max-width: 50vw;
+    margin: 50px auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    & > div.single {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        max-height: 12vw;
+        padding: 2vw;
+        cursor: pointer;
+        margin: 0 auto;
+        &:hover {
+            background-color: rgba(0, 255, 183, 0.2);
+            border-radius: 25px;
+        }
+        & > div.cover {
+            background: url("../logo/yuki-satellites.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 12vw;
+            height: 12vw;
+            border-radius: 10px;
+            box-shadow: 0 0 1vw var(--accent-light);
+        }
+        & > div.text {
+            margin-left: 3vw;
+            font-family: "OpenSans";
+            color: var(--accent-light);
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            max-height: 12vw;
+            & > span.title {
+                font-weight: 700;
+                font-size: 2vw;
+            }
+            & > span.subtitle {
+                font-weight: 400;
+                font-size: 1.5vw;
+            }
+            & > ol.tracks {
+                margin: 0;
+                font-size: 1.2vw;
+                font-weight: 300;
+            }
+            & > span.subscript {
+                font-weight: 200;
+                font-size: 1vw;
+            }
+        }
+    }
+}
+
+div.library {
+    display: none;
+}
+
+div.copyright {
+    color: var(--accent-light);
+    font-family: "OpenSans";
+    text-align: center;
+    font-size: 1em;
+}
