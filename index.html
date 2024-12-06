@@ -26,15 +26,28 @@
         </div>
         <div class="release" id="release">
             <div class="single" id="yuki-satellites">
+                <script>
+                    function yuki(x) {
+                        if (x.class == "sc") {
+                            window.open("https://soundcloud.com/musically_elevated/radix-yuki-satellites-elevated-re-mix", "_blank");
+                        } else {
+                            window.open("https://musically-elevated.bandcamp.com/track/yuki-satellites-elev-ted-remix", "_blank");
+                        }
+                    }
+                </script>
                 <div class="cover"></div>
                 <div class="text">
                     <span class="title">Yuki Satellites &lpar;ELEVΛTED Remix&rpar;</span>
                     <span class="subtitle">Tracklist:</span>
                     <ol class="tracks"><li>Yuki Satellites &lpar;ELEVΛTED Remix&rpar; &lbrack;04:26&rbrack;</li></ol>
-                    <span class="subscript">
-                        © Radix / Rymdlego<br>
-                        ℗ ELEVΛTED
-                    </span>
+                    <div class="other">
+                        <span class="subscript">
+                            © Radix / Rymdlego<br>
+                            ℗ ELEVΛTED
+                        </span>
+                        <div class="bc" title="Bandcamp" onclick="yuki(this)"></div>
+                        <div class="sc" title="Soundcloud" onclick="yuki(this)"></div>
+                    </div>
                 </div>
             </div>
             <hr>

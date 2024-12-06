@@ -109,11 +109,11 @@ div.release {
         margin: 0 auto;
         transition: 0.25s;
         &:hover {
-            background-color: rgba(0, 255, 183, 0.2);
+            background-color: rgba(0, 255, 183, 0.05);
             border-radius: 25px;
         }
         & > div.cover {
-            background: url("../logo/yuki-satellites.jpg");
+            background: url("../logo/covers/yuki-satellites.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
@@ -142,9 +142,39 @@ div.release {
                 font-size: 1.2vw;
                 font-weight: 300;
             }
-            & > span.subscript {
-                font-weight: 200;
-                font-size: 1vw;
+            & div.other {
+                display: grid;
+                grid-template-columns: 1fr min-content min-content;
+                column-gap: 0.2em;
+                align-items: center;
+                & > span.subscript {
+                    font-weight: 200;
+                    font-size: 1vw;
+                }
+                & > div.bc {
+                    background: url("../logo/assets/bandcamp.svg");
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                    background-position: center;
+                    width: 4vw;
+                    height: 4vw;
+                    &:hover {
+                        background-color: var(--accent-dark);
+                        border-radius: 100px;
+                    }
+                }
+                & > div.sc {
+                    background: url("../logo/assets/soundcloud.svg");
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                    background-position: center;
+                    width: 4vw;
+                    height: 4vw;
+                    &:hover {
+                        background-color: var(--accent-dark);
+                        border-radius: 100px;
+                    }
+                }
             }
         }
     }
