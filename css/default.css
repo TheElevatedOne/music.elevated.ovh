@@ -82,17 +82,24 @@ div.titlebar {
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
+        cursor: default;
     }
 }
 
 div.release {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: min-content min-content;
     max-width: 50vw;
     margin: 50px auto;
     padding-left: 45px;
     padding-right: 45px;
+    & > hr {
+        width: 100%;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        border: 0.2vw solid rgba(1, 150, 108, 0.5);
+        border-radius: 50px;
+    }
     & > div.single {
         display: grid;
         grid-template-columns: min-content max-content;
@@ -100,6 +107,7 @@ div.release {
         padding: 2vw;
         cursor: pointer;
         margin: 0 auto;
+        transition: 0.25s;
         &:hover {
             background-color: rgba(0, 255, 183, 0.2);
             border-radius: 25px;
