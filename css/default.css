@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans-VariableFont_wdthwght.ttf");
+}
+
+:root {
+    --accent-darkest: #111F2B;
+    --accent-darker: #002a2c;
+    --accent-dark: #00494d;
+    --accent-text-dark: #49bdcc;
+    --accent-text-light: #a3ffff;
+    --accent-light: #00ffb7;
+}
+
+body {
+    background-color: var(--accent-darkest);
+}
+
+div.titlebar {
+    margin: 2% auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-family: "OpenSans";
+    align-items: center;
+    background-color: var(--accent-darker);
+    border-radius: 15px;
+    box-shadow: 0 0.5em var(--accent-dark);
+    & div.left {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10%;
+        text-align: left;
+        & > span.link {
+            color: var(--accent-text-dark);
+            width: 5em;
+            font-size: 1.2vw;
+            cursor: pointer;
+        }
+        & > span.link:hover {
+            color: var(--accent-text-light);
+            font-weight: 600;
+            text-decoration: underline;
+            text-shadow: 0 0.25em black;
+        }
+    }
+    & div.right {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10%;
+        text-align: right;
+        & > span.link {
+            color: var(--accent-text-dark);
+            width: 5em;
+            font-size: 1.2vw;
+            cursor: pointer;
+        }
+        & > span.link:hover {
+            color: var(--accent-text-light);
+            font-weight: 600;
+            text-decoration: underline;
+            text-shadow: 0 0.25em black;
+        }
+    }
+    & > div.title {
+        background: url("../logo/elevated-music.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 85%;
+        height: 3em;
+        width: 25em;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

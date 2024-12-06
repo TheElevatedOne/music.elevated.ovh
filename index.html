@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="css/default.css">
+        <script src="js/redirect.js"></script>
     </head>
     <body>
-        
+        <div class="titlebar">
+            <div class="left">
+                <span class="link" id="bc" onclick="redirect(this)">Bandcamp</span>
+                <span class="link" id="sc" onclick="redirect(this)">Soundcloud</span>
+            </div>  
+            <div class="title" id="title"></div>
+            <div class="right">
+                <span class="link" id="rl">Releases</span>
+                <span class="link" id="lib">Library</span>
+            </div>
+        </div>
     </body>
 </html>
