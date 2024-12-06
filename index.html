@@ -11,6 +11,7 @@
         <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
         <title>ELEVATED | Music</title>
         <script src="js/redirect.js"></script>
+        <script src="js/switcher.js"></script>
     </head>
     <body>
         <div class="titlebar">
@@ -20,11 +21,11 @@
             </div>  
             <div class="title" id="title"></div>
             <div class="right">
-                <span class="link" id="rl">Releases</span>
-                <span class="link" id="lib">Library</span>
+                <span class="link" id="release" onclick="switcher(this)">Releases</span>
+                <span class="link" id="library" onclick="switcher(this)">Library</span>
             </div>
         </div>
-        <div class="release" id="release">
+        <div class="release" id="release-page">
             <div class="single" id="yuki-satellites">
                 <script>
                     function yuki(x) {
@@ -52,8 +53,11 @@
             </div>
             <hr>
         </div>
-        <div class="library" id="library">
-
+        <div class="library" id="library-page">
+            <p> 
+                <!-- temporary -->
+                Nothing Here Yet
+            </p>
         </div>
         <div class="copyright">
             <p>© 2024 - ELEVΛTED</p>

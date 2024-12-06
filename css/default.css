@@ -182,6 +182,14 @@ div.release {
 
 div.library {
     display: none;
+    & > p { /* temporary */
+        margin: 15%;
+        color: var(--accent-light);
+        text-align: center;
+        font-size: 2em;
+        font-family: "Noto Sans";
+        font-weight: bold;
+    }
 }
 
 div.copyright {
