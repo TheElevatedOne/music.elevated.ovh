@@ -48,7 +48,7 @@
             <div class="single" id="yuki-satellites">
                 <script>
                     function yuki(x) {
-                        if (x.class == "sc") {
+                        if (x.id == "sc") {
                             window.open("https://soundcloud.com/musically_elevated/radix-yuki-satellites-elevated-re-mix", "_blank");
                         } else {
                             window.open("https://musically-elevated.bandcamp.com/track/yuki-satellites-elev-ted-remix", "_blank");
@@ -65,8 +65,8 @@
                             © Radix / Rymdlego<br>
                             ℗ ELEVΛTED
                         </span>
-                        <div class="bc" title="Bandcamp" onclick="yuki(this)"></div>
-                        <div class="sc" title="Soundcloud" onclick="yuki(this)"></div>
+                        <div class="bc" id="bc" title="Bandcamp" onclick="yuki(this)"></div>
+                        <div class="sc" id="sc" title="Soundcloud" onclick="yuki(this)"></div>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="single" id="the-deviator">
                 <script>
                     function dev(x) {
-                        if (x.class == "sc") {
+                        if (x.id == "sc") {
                             window.open("https://soundcloud.com/musically_elevated/borgert-the-deviator-elevted-remix", "_blank");
                         } else {
                             window.open("https://musically-elevated.bandcamp.com/track/the-deviator-elev-ted-remix", "_blank");
@@ -91,8 +91,8 @@
                             © Borgert<br>
                             ℗ ELEVΛTED
                         </span>
-                        <div class="bc" title="Bandcamp" onclick="dev(this)"></div>
-                        <div class="sc" title="Soundcloud" onclick="dev(this)"></div>
+                        <div class="bc" id="bc" title="Bandcamp" onclick="dev(this)"></div>
+                        <div class="sc" id="sc" title="Soundcloud" onclick="dev(this)"></div>
                     </div>
                 </div>
             </div>
