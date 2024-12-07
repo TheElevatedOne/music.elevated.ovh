@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://music.elevated.ovh">
         <meta property="og:title" content="ELEVATED | Music">
@@ -17,14 +18,28 @@
     <body onload="isMobile()">
         <div class="titlebar">
             <div class="left">
-                <span class="link" id="bc" onclick="redirect(this)">Bandcamp</span>
-                <span class="link" id="sc" onclick="redirect(this)">Soundcloud</span>
-            </div>  
-            <div class="title" id="title"></div>
-            <div class="right">
-                <span class="link" id="release" onclick="switcher(this)">Releases</span>
-                <span class="link" id="library" onclick="switcher(this)">Library</span>
+                <script>
+                    function hamburger() {
+                        var x = document.getElementById("links");
+                        if (x.style.display === "grid") {
+                            x.style.display = "none";
+                        } else {
+                            x.style.display = "grid";
+                        }
+                    } 
+                </script>
+                <div class="links" id="links">
+                    <span class="link" id="bc" onclick="redirect(this)">Bandcamp</span>
+                    <span class="link" id="sc" onclick="redirect(this)">Soundcloud</span>
+                    <span class="link" id="release" onclick="switcher(this)">Releases</span>
+                    <span class="link" id="library" onclick="switcher(this)">Library</span>
+                </div>
+                <a href="javascript:void(0);" class="hamb" onclick="hamburger()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
+            <div class="title" id="title"></div>
+            <div class="mu-icon"></div>
         </div>
         <div class="release" id="release-page">
             <div class="single" id="yuki-satellites">

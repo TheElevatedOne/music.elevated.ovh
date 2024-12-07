@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../fonts/OpenSans-VariableFont_wdthwght.ttf");
+}
+
+:root {
+    --accent-darkest: #111F2B;
+    --accent-darker: #002a2c;
+    --accent-dark: #00494d;
+    --accent-text-dark: #49bdcc;
+    --accent-text-light: #a3ffff;
+    --accent-light: #00ffb7;
+}
+
+body {
+    background-color: var(--accent-darkest);
+}
+
+div.titlebar {
+    margin: 2% auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-family: "OpenSans";
+    align-items: center;
+    background-color: var(--accent-darker);
+    border-radius: 15px;
+    box-shadow: 0 0.5em var(--accent-dark);
+    & > div.left > div.links {
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: calc(1% + 5em + 20px);
+        left: 3%;
+        background-color: var(--accent-darker);
+        border-radius: 15px;
+        box-shadow: 0 0.5em var(--accent-dark);
+        padding-top: 1%;
+        padding-bottom: 10%;
+        padding-left: 3%;
+        padding-right: 6%;
+        display: none;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 10%;
+        & > span.link {
+            color: var(--accent-text-dark);
+            width: 5em;
+            font-size: 3em;
+            cursor: pointer;
+        }
+        & > span.link:hover {
+            color: var(--accent-text-light);
+            font-weight: 600;
+            text-decoration: underline;
+            text-shadow: 0 0.25em black;
+        }
+        & + a.hamb {
+            font-size: 3em;
+            display: block;
+            position: relative;
+            color: var(--accent-light);
+            right: 0;
+            top: 0;
+            text-align: left;
+        }
+    }
+    & > div.title {
+        background: url("../../logo/elevated-music.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 85%;
+        height: 5em;
+        width: 35em;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+    }
+    & > div.mu-icon {
+        background-image: url("../../favicon.svg");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 85%;
+        width: 5em;
+        height: 5em;
+        margin-left: 5em;
+    }
+}
+
+div.release {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    & > hr {
+        width: 100%;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        border: 0.2vw solid rgba(1, 150, 108, 0.5);
+        border-radius: 50px;
+    }
+    & > div.single {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        max-width: 1000px;
+        padding: 2vw;
+        cursor: pointer;
+        margin: 0 auto;
+        transition: 0.25s;
+        &:hover {
+            background-color: rgba(0, 255, 183, 0.05);
+            border-radius: 25px;
+        }
+        & > div.cover {
+            background: url("../../logo/covers/yuki-satellites.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 24vw;
+            height: 24vw;
+            border-radius: 10px;
+            box-shadow: 0 0 1vw var(--accent-light);
+        }
+        & > div.text {
+            margin-left: 4vw;
+            font-family: "OpenSans";
+            color: var(--accent-light);
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            max-height: 24vw;
+            max-width: calc(1000px - 24vw);
+            & > span.title {
+                font-weight: 700;
+                font-size: 3.5vw;
+            }
+            & > span.subtitle {
+                font-weight: 400;
+                font-size: 2.5vw;
+            }
+            & > ol.tracks {
+                margin: 0;
+                font-size: 2.2vw;
+                font-weight: 300;
+            }
+            & div.other {
+                display: grid;
+                grid-template-columns: 1fr min-content min-content;
+                column-gap: 0.2em;
+                align-items: center;
+                & > span.subscript {
+                    font-weight: 200;
+                    font-size: 2vw;
+                }
+                & > div.bc {
+                    background: url("../../logo/assets/bandcamp.svg");
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                    background-position: center;
+                    width: 9vw;
+                    height: 9vw;
+                    &:hover {
+                        background-color: var(--accent-dark);
+                        border-radius: 100px;
+                    }
+                }
+                & > div.sc {
+                    background: url("../../logo/assets/soundcloud.svg");
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                    background-position: center;
+                    width: 9vw;
+                    height: 9vw;
+                    &:hover {
+                        background-color: var(--accent-dark);
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.library {
+    display: none;
+    & > p { /* temporary */
+        margin: 15%;
+        color: var(--accent-light);
+        text-align: center;
+        font-size: 4em;
+        font-family: "Noto Sans";
+        font-weight: bold;
+    }
+}
+
+div.copyright {
+    color: var(--accent-light);
+    font-family: "OpenSans";
+    text-align: center;
+    font-size: 1.5em;
+}
