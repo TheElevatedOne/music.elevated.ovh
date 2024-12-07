@@ -95,9 +95,9 @@ div.titlebar {
 
 div.release {
     display: grid;
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content min-content min-content min-content;
     max-width: 1100px;
-    margin: 50px auto;
+    margin: 25px auto;
     padding-left: 45px;
     padding-right: 45px;
     & > hr {
@@ -119,13 +119,18 @@ div.release {
             background-color: rgba(0, 255, 183, 0.05);
             border-radius: 25px;
         }
+        & div#yuki-cover {
+            background-image: url("../../logo/covers/yuki-satellites.jpg");
+        }
+        & div#dev-cover {
+            background-image: url("../../logo/covers/deviator.jpg");
+        }
         & > div.cover {
-            background: url("../../logo/covers/yuki-satellites.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
-            width: 24vw;
-            height: 24vw;
+            width: 12vw;
+            height: 12vw;
             border-radius: 10px;
             box-shadow: 0 0 1vw var(--accent-light);
         }
@@ -187,6 +192,7 @@ div.release {
         }
     }
 }
+
 
 div.library {
     display: none;

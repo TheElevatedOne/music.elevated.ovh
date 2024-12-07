@@ -33,14 +33,14 @@
             <div class="single" id="yuki-satellites">
                 <script>
                     function yuki(x) {
-                        if (x.class == "sc") {
+                        if (x.id == "sc") {
                             window.open("https://soundcloud.com/musically_elevated/radix-yuki-satellites-elevated-re-mix", "_blank");
                         } else {
                             window.open("https://musically-elevated.bandcamp.com/track/yuki-satellites-elev-ted-remix", "_blank");
                         }
                     }
                 </script>
-                <div class="cover"></div>
+                <div class="cover" id="yuki-cover"></div>
                 <div class="text">
                     <span class="title">Yuki Satellites &lpar;ELEVΛTED Remix&rpar;</span>
                     <span class="subtitle">Tracklist:</span>
@@ -50,8 +50,34 @@
                             © Radix / Rymdlego<br>
                             ℗ ELEVΛTED
                         </span>
-                        <div class="bc" title="Bandcamp" onclick="yuki(this)"></div>
-                        <div class="sc" title="Soundcloud" onclick="yuki(this)"></div>
+                        <div class="bc" id="bc" title="Bandcamp" onclick="yuki(this)"></div>
+                        <div class="sc" id="sc" title="Soundcloud" onclick="yuki(this)"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="single" id="the-deviator">
+                <script>
+                    function dev(x) {
+                        if (x.id == "sc") {
+                            window.open("https://soundcloud.com/musically_elevated/borgert-the-deviator-elevted-remix", "_blank");
+                        } else {
+                            window.open("https://musically-elevated.bandcamp.com/track/the-deviator-elev-ted-remix", "_blank");
+                        }
+                    }
+                </script>
+                <div class="cover" id="dev-cover"></div>
+                <div class="text">
+                    <span class="title">The Deviator &lpar;ELEVΛTED Remix&rpar;</span>
+                    <span class="subtitle">Tracklist:</span>
+                    <ol class="tracks"><li>The Deviator &lpar;ELEVΛTED Remix&rpar; &lbrack;03:53&rbrack;</li></ol>
+                    <div class="other">
+                        <span class="subscript">
+                            © Borgert<br>
+                            ℗ ELEVΛTED
+                        </span>
+                        <div class="bc" id="bc" title="Bandcamp" onclick="dev(this)"></div>
+                        <div class="sc" id="sc" title="Soundcloud" onclick="dev(this)"></div>
                     </div>
                 </div>
             </div>
